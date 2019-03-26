@@ -459,9 +459,21 @@
 
 .jumbotron.pyn-intro {
     position: relative;
-    padding-top: 60px;
-    padding-bottom: 80px;
-    background-color: #2B3407;
+    padding: 0px;
+    background-color: rgba(243, 237, 215, 0.5);
+}
+
+.bg-pattern {
+    background: url(../images/pattern.svg) repeat center;
+}
+
+.cacto {
+    background: url(../images/cacto.svg) no-repeat left center;
+    background-position-y: 2em;
+}
+
+.fixed-bg {
+    background: url(../images/fix-right.svg) no-repeat right center;
 }
 
 .jumbotron.pyn-intro h1 {
@@ -475,31 +487,21 @@
 .jumbotron.pyn-intro h2 {
     font-size: 28px;
     font-weight: 700;
-    color: #8EAA16;
+    color: rgb(138, 13, 15);
 }
 
-.jumbotron.pyn-intro h3 {
-    color: #D1DE79;
+.jumbotron.pyn-intro h2 strong {
+    color: rgb(221,77,38);
 }
 
 .jumbotron.pyn-intro .pyn--intro-logo {
-    margin-top: 60px;
-    margin-bottom: 70px
+    margin: 3%;
 }
 
 .jumbotron.pyn-intro .pyn--intro-logo img {
     float: none;
-    margin: 0 auto
-}
-
-.jumbotron.pyn-intro .pyn--intro-overlay {
-    position: absolute;
-    z-index: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 344px;
-    background-image: linear-gradient(-180deg, transparent 0%, rgba(28, 58, 86, .9)100%)
+    margin: 0 auto;
+    width: 80%;
 }
 
 .jumbotron.pyn-intro .container {
@@ -507,31 +509,26 @@
     z-index: 10
 }
 
-.jumbotron.negative {
-    color: #fff;
-    background-image: linear-gradient(-180deg, #1e2933 0%, #1b3a55 140px)
-}
-
-.jumbotron.negative span {
-    color: #fff;
-    background-color: #1b3a55;
-    font-weight: 300
-}
-
 @media (max-width:767px) {
     .jumbotron.pyn-intro h1 {
-        font-size: 32px
+        font-size: 32px;
     }
     .jumbotron.pyn-intro h2 {
-        font-size: 22px
+        font-size: 22px;
     }
+}
+
+.pyn-section {
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .pyn-section h1 {
     position: relative;
+    margin-top: 75px;
     margin-bottom: 25px;
     text-transform: uppercase;
-    font-size: 32px
+    font-size: 32px;
 }
 
 .pyn-section h1::before {
@@ -559,6 +556,14 @@
     font-size: 20px;
     line-height: 24px;
     color: #2B3407;
+}
+
+.pyn-section a {
+    color: #580001;
+}
+
+.pyn-section a:hover {
+    color: #8EAA16;
 }
 
 .pyn-section .btn-default,
@@ -627,6 +632,18 @@
     color: #8d909d;
     font-size: 24px;
     line-height: 34px
+}
+
+#social-icons {
+    margin-top: 50px;
+}
+
+#social-icons i {
+    padding: 10px;
+}
+
+#map-container {
+    padding: 25px;
 }
 
 #section-3 .col-md-3 {
