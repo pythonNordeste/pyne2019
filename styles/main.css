@@ -848,6 +848,10 @@ a:hover {
     text-align: center;
 }
 
+.pyn-section-anchor:hover, .pyn-section-anchor:focus {
+    text-decoration: none;
+}
+
 .pyn-section-cpf strong {
     font-weight: bold;
 }
