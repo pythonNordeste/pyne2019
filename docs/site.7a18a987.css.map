@@ -1,0 +1,1 @@
+{"version":3,"sources":["styles/site.scss"],"names":[],"mappings":"AAEA,KACE","file":"site.7a18a987.css","sourceRoot":"..","sourcesContent":["@import \"./variables\";\n\nbody {\n  font-family: $default-font-family;\n}\n"]}
