@@ -1,5 +1,159 @@
 @import "./variables";
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: transparentize($dark-red, 0.6);
+}
+
 body {
+  margin: 0;
   font-family: $default-font-family;
+}
+
+a {
+  color: $base-red;
+  text-decoration: none;
+
+  &:hover {
+    color: $dark-red;
+  }
+}
+
+.is-button {
+  padding: 12px 18px;
+  border-radius: 3px;
+
+  &.get-tickets {
+    background: $light-green;
+    color: $darker-green;
+
+    &:hover {
+      color: $dark-green;
+      background: lighten($light-green, 2%);
+    }
+  }
+
+  &.submissions {
+    background: $dark-red;
+    color: $white;
+
+    &:hover {
+      background: $base-red;
+    }
+  }
+}
+
+.navbar {
+  background: $beige;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px $base-horizontal-padding;
+
+  .logo > img {
+    margin-top: 4px;
+    width: 124px;
+  }
+
+  nav.menu {
+    font-size: 18px;
+
+    a {
+      margin-left: 15px;
+    }
+  }
+}
+
+/* Hero section */
+
+.hero {
+  background: $base-red;
+
+  > .content {
+    padding: 50px ($base-horizontal-padding * 3) 90px;
+    min-height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    color: $white;
+
+    h1 {
+      margin: 20px 0;
+      font-size: 60px;
+      letter-spacing: -1px;
+      color: $light-green;
+      line-height: 30px;
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: 500;
+    }
+
+    h3 {
+      font-size: 26px;
+    }
+  }
+
+
+  .more-button {
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      transparentize($black, 0.8) 110%
+    );
+    padding-bottom: 20px;
+    cursor: pointer;
+
+    > i {
+      display: block;
+      position: relative;
+      margin: 0 auto 10px;
+      width: 25px;
+      height: 25px;
+      border: solid $white;
+      border-width: 0 2px 2px 0;
+      transform: rotateZ(45deg);
+      animation: arrow 1s ease-in-out;
+      animation-iteration-count: 2;
+    }
+
+    &:hover {
+      i {
+        top: 4px;
+      }
+    }
+  }
+}
+
+@keyframes arrow {
+  0%, 100% {
+    top: 0;
+  }
+
+  50% {
+    top: 5px;
+  }
+}
+
+/* Sponsors */
+
+.sponsors {
+  background: $beige;
+  padding: 25px 0;
+  text-align: center;
+
+  .section-title {
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  .subsection {
+    margin: 15px 0;
+  }
 }
