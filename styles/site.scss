@@ -148,7 +148,6 @@ a {
 
   .logo > img {
     height: 32px;
-    width: 100%;
   }
 
   nav.menu {
@@ -186,7 +185,7 @@ a {
   }
 
   @include tablet-wide {
-    padding: 10px 25px;
+    padding: 10px 20px;
 
     nav {
       a {
@@ -198,7 +197,7 @@ a {
 
   @include tablet {
     position: relative;
-    padding: 0;
+    padding: 10px 0; // definido nos elementos
     z-index: 11;
 
     .logo {
@@ -206,12 +205,12 @@ a {
     }
 
     nav.menu {
+      box-shadow: inset 0 2px 8px transparentize($black, 0.9);
       position: absolute;
       top: 100%;
       flex-flow: column nowrap;
       background: $white;
       width: 100%;
-      transition: all 0.1s ease-in-out;
       display: none;
 
       &.is-open {
@@ -219,20 +218,13 @@ a {
       }
 
       a {
-        margin: 0;
         text-align: center;
         color: $base-red;
         padding: 15px 0px;
         font-size: 18px;
 
         &.submissions {
-          color: $white;
-          text-transform: uppercase;
           margin: 0 15px 15px;
-
-          &:hover {
-            color: $dark-red;
-          }
         }
       }
     }
