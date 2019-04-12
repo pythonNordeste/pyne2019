@@ -321,19 +321,18 @@ a {
 
 /* Locations */
 .locations {
-  // background: url(../images/) 50% 0 no-repeat fixed;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)
+  ), url(../images/cais.jpg) 50% 0 no-repeat fixed;
   background-position: center -100px;
   background-size: cover;
 
-  color: $dark-green;
+  color: $white;
 
   a {
-    color: $dark-green;
+    color: $white;
     font-weight: bold;
-
-    &:hover {
-      color: lighten($dark-green, 2%);
-    }
   }
 }
 
