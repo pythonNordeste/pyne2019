@@ -157,11 +157,6 @@ a {
     a {
       margin-left: 15px;
       text-transform: uppercase;
-
-      &.get-tickets {
-        color: $base-green;
-        font-weight: 600;
-      }
     }
   }
 
@@ -209,6 +204,7 @@ a {
       background: $white;
       width: 100%;
       display: none;
+      box-shadow: 0 2px 8px transparentize($black, 0.8);
 
       &.is-open {
         display: flex;
@@ -219,6 +215,11 @@ a {
         color: $base-red;
         padding: 15px 0px;
         font-size: 18px;
+
+        &.get-tickets {
+          color: $white;
+          margin: 0 15px 10px;
+        }
 
         &.submissions {
           margin: 0 15px 15px;
@@ -422,10 +423,23 @@ a {
 .tickets-cta {
   background-color: $lighter-red;
   color: $darker-red;
+  position: relative;
+
+  .section-title {
+    margin-top: 20px;
+  }
 
   .content {
     margin: auto;
     max-width: 500px;
+  }
+
+  .detail {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-50%);
+    height: 65px;
   }
 
   @include tablet {
@@ -436,7 +450,9 @@ a {
         display: flex;
         flex-flow: column nowrap;
 
-        a { margin-top: 15px; }
+        a {
+          margin-top: 15px;
+        }
       }
     }
   }
@@ -446,7 +462,7 @@ a {
   position: relative;
   z-index: 5;
   border-radius: 15px;
-  box-shadow: 0 10px 60px 0 rgba(0, 0, 0, .74);
+  box-shadow: 0 10px 60px 0 rgba(0, 0, 0, 0.74);
 }
 
 /* Utilities */
