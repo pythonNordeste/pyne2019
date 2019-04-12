@@ -263,6 +263,9 @@ a {
 
 .footer .social-medias {
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-top: 2px solid transparentize($beige, 0.5);
   width: 50%;
   margin: 0 auto;
