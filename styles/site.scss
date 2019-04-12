@@ -145,10 +145,11 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 20px $base-horizontal-padding;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 3px 0 transparentize($black, 0.8);
   position: fixed;
   z-index: 99;
   width: 100%;
+  box-sizing: border-box;
 
   .logo > img {
     height: 32px;
@@ -156,7 +157,6 @@ a {
 
   nav.menu {
     font-size: 16px;
-    box-shadow: 0 2px 8px transparentize($black, 0.8);
 
     a {
       margin-left: 15px;
@@ -184,7 +184,7 @@ a {
     padding: 10px 20px;
 
     nav.menu {
-      box-shadow: none;
+      box-shadow: unset;
 
       a {
         font-size: 13px;
