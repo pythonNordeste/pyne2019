@@ -142,6 +142,16 @@ a {
 
     a {
       margin-left: 15px;
+
+      &.get-tickets {
+        color: $base-green;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      &.submissions {
+        text-transform: uppercase;
+      }
     }
   }
 
@@ -201,16 +211,14 @@ a {
         padding: 15px 0px;
         font-size: 18px;
 
-        &.get-tickets {
-          color: $base-green;
-          font-weight: 600;
-          text-transform: uppercase;
-        }
-
         &.submissions {
           color: $white;
           text-transform: uppercase;
           margin: 0 15px 15px;
+
+          &:hover {
+            color: $dark-red;
+          }
         }
       }
     }
