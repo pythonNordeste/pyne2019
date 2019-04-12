@@ -1,0 +1,37 @@
+$breakpoints: (
+    'phone':        400px,
+    'phone-wide':   480px,
+    'phablet':      560px,
+    'tablet-small': 640px,
+    'tablet':       820px,
+    'tablet-wide':  1024px,
+    'desktop':      1248px,
+    'desktop-wide': 1440px
+);
+
+@mixin responsive($width, $type: max) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+@mixin tablet-wide {
+  @include responsive('tablet-wide') {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @include responsive('tablet') {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @include responsive('phone-wide') {
+    @content;
+  }
+}
