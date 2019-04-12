@@ -290,6 +290,8 @@ a {
 /* Hero section */
 
 .hero {
+  padding-top: 75px;
+
   > .content {
     padding: 50px ($base-horizontal-padding * 3) 90px;
     display: flex;
@@ -512,4 +514,29 @@ a {
 
 .hidden {
   display: none;
+}
+
+/* Submissions */
+
+.submissions-section {
+  .section-title {
+    background: $base-red;
+    padding: 80px $base-horizontal-padding 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+  }
+
+  .content {
+    text-align: left;
+  }
+
+  @include tablet-wide {
+    padding: 20px 0 0;
+
+    .content {
+      padding: 0 20px 20px;
+    }
+  }
 }
