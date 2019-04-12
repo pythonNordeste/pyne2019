@@ -24,10 +24,6 @@
   background-size: cover;
 }
 
-.fixed-bg {
-  background: url(../images/fix-right.svg) no-repeat right center;
-}
-
 .jumbotron.pyn-intro h1 {
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -243,7 +239,7 @@ a {
 /* Footer */
 
 .footer {
-  padding: 25px;
+  padding: 25px 25px 10px 25px;
   background-color: $darker-green;
 }
 
@@ -267,8 +263,8 @@ a {
   border-top: 2px solid transparentize($beige, 0.5);
   width: 50%;
   margin: 0 auto;
-  margin-top: 40px;
-  padding-top: 40px;
+  margin-top: 20px;
+  padding-top: 20px;
 
   a {
     display: inline-block;
@@ -385,8 +381,8 @@ a {
 
 /* Sponsors */
 
-.sponsors {
-  background: $white;
+.section-base.sponsors {
+  background: url(../images/areia.svg) repeat-x center center;
   color: $darker-green;
 
   .subsection {
@@ -395,7 +391,13 @@ a {
     margin: 50px 0;
   }
 
+  .section-title {
+    background: $white;
+  }
+
   .content {
+    background: $white;
+    padding: 2rem;
     margin: auto;
     max-width: 450px;
   }
