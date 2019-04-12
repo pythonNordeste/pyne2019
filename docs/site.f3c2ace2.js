@@ -3,4 +3,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{}],"QwA3":[function(require,module,exports) {
 "use strict";var e=n(require("page-scroll-to-id"));function n(e){return e&&e.__esModule?e:{default:e}}$(document).ready(function(){r(),t()});var r=function(){var e=$("#pyn-nav");$("#toggleMenu").click(function(){return e.toggleClass("is-open")})},t=function(){$(".navbar a[href*='#']").mPageScroll2id({offset:80})};
 },{"page-scroll-to-id":"VDdT"}]},{},["QwA3"], null)
-//# sourceMappingURL=/site.f3c2ace2.js.map
+//# sourceMappingURL=site.f3c2ace2.js.map
