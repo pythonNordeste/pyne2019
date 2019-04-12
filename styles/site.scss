@@ -376,6 +376,10 @@ a {
       }
     }
   }
+
+  @include tablet-wide {
+    padding-top: 20px;
+  }
 }
 
 @keyframes arrow {
