@@ -9,6 +9,19 @@
   grid-auto-flow: column;
   grid-template-columns: 40% 60%;
   min-height: 90vh;
+
+  @include tablet-wide {
+
+  }
+
+  @include tablet {
+
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    min-height: 70vh;
+  }
 }
 
 .bg-pattern {
@@ -16,6 +29,11 @@
 
   img.pattern {
     position: absolute;
+
+    @include mobile {
+      height: 60%;
+      z-index: 11;
+    }
   }
 }
 
@@ -49,7 +67,7 @@
   font-weight: 600;
   color: $base-green;
   text-align: center;
-  margin: 0;
+  margin: 2rem 0 0;
 
   span {
     color: $darker-red;
@@ -58,12 +76,20 @@
 
 .jumbotron.pyn-intro .pyn--intro-logo {
   background: $white;
-  padding: 2rem 1rem;
+  padding: 4rem 1.5rem;
   position: absolute;
-  min-width: 350px;
-  top: 15%;
-  left: 50%;
+  width: 360px;
+  top: 25%;
+  left: 60%;
   z-index: 10;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+
+  @include mobile {
+    position: relative;
+    padding: 2rem 1rem;
+    top: 15%;
+    left: 0;
+  }
 
   img {
     width: 80%;
@@ -201,7 +227,7 @@ a {
   @include tablet {
     position: fixed;
     padding: 10px 0; // definido nos elementos
-    z-index: 11;
+    z-index: 15;
 
     .logo {
       padding-left: 15px;
@@ -363,12 +389,17 @@ a {
 
 /* About */
 
-.about {
+.section-base.about {
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 40% 60%;
   background: url(../images/fix-right.svg) no-repeat 90vw center;
   color: $darker-green;
+
+  @include mobile {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+  }
 
   .section-title {
     display: flex;
@@ -386,6 +417,10 @@ a {
 
     p {
       margin-top: 0;
+    }
+
+    @include mobile {
+      padding: 0 30px;
     }
   }
 }
@@ -507,6 +542,10 @@ a {
   .section-title {
     font-weight: 600;
     font-size: 40px;
+
+    @include mobile {
+      font-size: 32px;
+    }
   }
 
   .content {
