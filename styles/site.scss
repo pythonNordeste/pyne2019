@@ -24,10 +24,6 @@
   background-size: cover;
 }
 
-.fixed-bg {
-  background: url(../images/fix-right.svg) no-repeat right center;
-}
-
 .jumbotron.pyn-intro h1 {
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -383,8 +379,8 @@ a {
 
 /* Sponsors */
 
-.sponsors {
-  background: $white;
+.section-base.sponsors {
+  background: url(../images/areia.svg) repeat-x center center;
   color: $darker-green;
 
   .subsection {
@@ -393,7 +389,13 @@ a {
     margin: 50px 0;
   }
 
+  .section-title {
+    background: $white;
+  }
+
   .content {
+    background: $white;
+    padding: 2rem;
     margin: auto;
     max-width: 450px;
   }
