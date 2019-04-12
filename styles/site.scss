@@ -417,6 +417,11 @@ a {
   grid-auto-flow: column;
   grid-template-columns: 45% 55%;
 
+  @include tablet-wide {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+  }
+
   a {
     color: $white;
     font-weight: bold;
