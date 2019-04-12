@@ -108,10 +108,12 @@ a {
 }
 
 .is-button {
+  display: inline-block;
   padding: 8px 18px;
   border-radius: 4px;
   font-weight: 600;
   line-height: 1.4;
+  text-transform: uppercase;
   border: solid 2px $base-red;
 
   &.get-tickets {
@@ -124,7 +126,7 @@ a {
   }
 
   &.submissions {
-    background: $white;
+    background: transparent;
     color: $base-red;
 
     &:hover {
@@ -316,8 +318,20 @@ a {
 
 /* Tickets CTA */
 .tickets-cta {
-  background-color: $light-red;
+  background-color: $lighter-red;
   color: $darker-red;
+
+  .content {
+    margin: auto;
+    max-width: 500px;
+  }
+}
+
+.map-container {
+  position: relative;
+  z-index: 5;
+  border-radius: 15px;
+  box-shadow: 0 10px 60px 0 rgba(0, 0, 0, .74);
 }
 
 /* Utilities */
