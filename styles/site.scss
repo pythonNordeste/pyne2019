@@ -70,6 +70,11 @@
     display: block;
     margin: auto;
   }
+
+  h2 > span {
+    display: inline-block;
+    margin-right: 8px;
+  }
 }
 
 .container {
@@ -145,8 +150,11 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 20px $base-horizontal-padding;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 3px 0 transparentize($black, 0.8);
   position: fixed;
+  z-index: 99;
+  width: 100%;
+  box-sizing: border-box;
 
   .logo > img {
     height: 32px;
@@ -180,7 +188,9 @@ a {
   @include tablet-wide {
     padding: 10px 20px;
 
-    nav {
+    nav.menu {
+      box-shadow: unset;
+
       a {
         font-size: 13px;
         margin-left: 0;
@@ -189,7 +199,7 @@ a {
   }
 
   @include tablet {
-    position: relative;
+    position: fixed;
     padding: 10px 0; // definido nos elementos
     z-index: 11;
 
@@ -198,14 +208,12 @@ a {
     }
 
     nav.menu {
-      box-shadow: inset 0 2px 8px transparentize($black, 0.9);
       position: absolute;
       top: 100%;
       flex-flow: column nowrap;
       background: $white;
       width: 100%;
       display: none;
-      box-shadow: 0 2px 8px transparentize($black, 0.8);
 
       &.is-open {
         display: flex;
@@ -260,6 +268,9 @@ a {
 
 .footer .social-medias {
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-top: 2px solid transparentize($beige, 0.5);
   width: 50%;
   margin: 0 auto;
