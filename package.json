@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel index.html",
-    "build": "parcel build index.html -d docs/"
+    "dev": "parcel index.html submissions.html",
+    "build": "parcel build index.html submissions.html --out-dir docs --public-url ./"
   },
   "repository": {
     "type": "git",
@@ -21,10 +21,12 @@
   "dependencies": {
     "assemble": "^0.3.83",
     "grunt": "^0.4.5",
+    "jquery": "^3.4.0",
+    "page-scroll-to-id": "^1.5.9",
     "parcel-bundler": "^1.12.3",
-    "styles": "^0.2.1"
+    "marked": ">=0.3.9"
   },
   "devDependencies": {
-    "sass": "^1.17.4"
+    "sass": "^1.18.0"
   }
 }
