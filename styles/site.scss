@@ -433,7 +433,9 @@ a {
         display: flex;
         flex-flow: column nowrap;
 
-        a { margin-top: 15px; }
+        a {
+          margin-top: 15px;
+        }
       }
     }
   }
@@ -443,7 +445,7 @@ a {
   position: relative;
   z-index: 5;
   border-radius: 15px;
-  box-shadow: 0 10px 60px 0 rgba(0, 0, 0, .74);
+  box-shadow: 0 10px 60px 0 rgba(0, 0, 0, 0.74);
 }
 
 /* Utilities */
