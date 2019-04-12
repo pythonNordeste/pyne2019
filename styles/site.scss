@@ -419,10 +419,23 @@ a {
 .tickets-cta {
   background-color: $lighter-red;
   color: $darker-red;
+  position: relative;
+
+  .section-title {
+    margin-top: 20px;
+  }
 
   .content {
     margin: auto;
     max-width: 500px;
+  }
+
+  .detail {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-50%);
+    height: 65px;
   }
 
   @include tablet {
