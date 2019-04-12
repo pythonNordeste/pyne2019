@@ -146,6 +146,7 @@ a {
   justify-content: space-between;
   padding: 20px $base-horizontal-padding;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+  position: fixed;
 
   .logo > img {
     height: 32px;
