@@ -396,6 +396,8 @@ a {
 
   .section-title {
     background: $white;
+    margin: auto;
+    max-width: 450px;
   }
 
   .content {
@@ -413,12 +415,26 @@ a {
     url(../images/cais.jpg) 50% 0 no-repeat fixed;
   background-position: center -100px;
   background-size: cover;
-
   color: $white;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 45% 55%;
 
   a {
     color: $white;
     font-weight: bold;
+  }
+
+  .section-title {
+    background: url(../images/light.svg) no-repeat left top;
+  }
+
+  .content {
+    text-align: justify;
+
+    span {
+      font-size: 12px;
+    }
   }
 }
 
