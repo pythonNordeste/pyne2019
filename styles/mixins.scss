@@ -49,8 +49,16 @@ $breakpoints: (
   height: $height;
 }
 
-@mixin flex-center() {
+@mixin flex-center($justify: center) {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: $justify;
+}
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
 }

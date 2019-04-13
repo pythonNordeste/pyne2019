@@ -36,3 +36,27 @@ $headings-margin-bottom: 1rem;
 $paragraph-margin-bottom: 1rem;
 
 $base-horizontal-padding: 50px;
+
+// Navbar
+$navbar-bg: $white;
+$navbar-icon-bg: $base-red;
+$navbar-btn-color: $white;
+$navbar-btn-margin: 0 15px 10px;
+// $navbar-btn-primary-bg: $base-red;
+// $navbar-btn-secondary-bg: $white;
+// $navbar-btn-color: $base-red;
+$navbar-font-size: 16px;
+$navbar-font-size-tablet: 18px;
+$navbar-font-size-tablet-wide: 13px;
+$navbar-padding: 20px 50px;
+$navbar-padding-tablet-wide: 10px 20px;
+$navbar-padding-tablet: 10px 0;
+$navbar-logo-height: 32px;
+$navbar-logo-padding-tablet: 15px;
+$navbar-spacing: 15px;
+$navbar-spacing-tablet-wide: 0;
+$navbar-shadow: 0 1px 3px 0 transparentize($black, 0.8);
+$navbar-collapsed-shadow: unset;
+$navbar-z-index: 99;
+$navbar-z-index-tablet: 15;
+$navbar-icon-z-index: 50;
