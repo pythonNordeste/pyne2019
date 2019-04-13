@@ -1,6 +1,51 @@
 @import "./variables";
 @import "./mixins";
 
+
+/* Global */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: $selection-bg;
+}
+
+body {
+  margin: 0;
+  font-family: $font-family-base;
+  font-weight: $font-weight-base;
+  background-color: $body-bg;
+  background-color: $body-bg;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: $headings-margin-bottom;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: $paragraph-margin-bottom;
+}
+
+a {
+  color: $link-color;
+  text-decoration: $link-decoration;
+  font-weight: $link-font-weight;
+
+  &:hover {
+    color: darken($link-color, 10%);
+  }
+}
+
 .jumbotron.pyn-intro {
   position: relative;
   padding: 0px;
@@ -9,14 +54,6 @@
   grid-auto-flow: column;
   grid-template-columns: 40% 60%;
   min-height: 90vh;
-
-  @include tablet-wide {
-
-  }
-
-  @include tablet {
-
-  }
 
   @include mobile {
     grid-template-columns: 1fr;
@@ -121,26 +158,6 @@
     display: table;
     box-sizing: border-box;
   }
-}
-
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-::selection {
-  background: transparentize($dark-red, 0.6);
-}
-
-body {
-  margin: 0;
-  font-family: $default-font-family;
-}
-
-a {
-  text-decoration: none;
-  color: $base-red;
-  font-weight: 600;
 }
 
 .is-button {
@@ -590,7 +607,7 @@ a {
     }
   }
 
-  @include responsive('desktop', 'min') {
+  @include desktop-up {
     .content {
       max-width: 800px;
       margin: 0 auto;

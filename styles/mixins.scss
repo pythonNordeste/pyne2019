@@ -18,8 +18,9 @@ $breakpoints: (
   }
 }
 
-@mixin tablet-wide {
-  @include responsive("tablet-wide") {
+// Responsive mixins
+@mixin mobile {
+  @include responsive("phone-wide") {
     @content;
   }
 }
@@ -30,8 +31,26 @@ $breakpoints: (
   }
 }
 
-@mixin mobile {
-  @include responsive("phone-wide") {
+@mixin tablet-wide {
+  @include responsive("tablet-wide") {
     @content;
   }
+}
+
+@mixin desktop-up {
+  @include responsive("desktop", $type: min) {
+    @content;
+  }
+}
+
+// Utils mixins
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

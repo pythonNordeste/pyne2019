@@ -1,7 +1,4 @@
-$default-font-family: 'Saira', 'Helvetica Neue', 'Helvetica', sans-serif;
-
-$base-horizontal-padding: 50px;
-
+//
 // General colors
 $light-beige: #f6f3e3;
 $beige: #F2ECD7;
@@ -20,3 +17,22 @@ $light-red: #F9B295;
 $base-red: #DD4D25;
 $dark-red: #8A100E;
 $darker-red: #580601;
+
+// Typography
+$font-family-base: 'Saira', 'Helvetica Neue', 'Helvetica', sans-serif;
+$font-weight-base: 400;
+$font-weight-bold: 500;
+$font-weight-bolder: 600;
+
+// General
+$body-bg: $white;
+$selection-bg: transparentize($dark-red, 0.6);
+
+$link-color: $base-red;
+$link-font-weight: $font-weight-bolder;
+$link-decoration: none;
+
+$headings-margin-bottom: 1rem;
+$paragraph-margin-bottom: 1rem;
+
+$base-horizontal-padding: 50px;
