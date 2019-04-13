@@ -1,36 +1,44 @@
 // About
-.section-base.about {
+$about-max-width: 650px;
+$about-color: $darker-green;
+
+.about {
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 40% 60%;
   background: url(../images/fix-right.svg) no-repeat 90vw center;
-  color: $darker-green;
+  color: $about-color;
 
-  @include mobile {
+  @include tablet-wide {
+    background-position: 97vw;
+  }
+
+  @include tablet {
     grid-auto-flow: row;
     grid-template-columns: 1fr;
+    background-repeat: repeat-y;
   }
 
   .section-title {
     display: flex;
     align-items: start;
-    justify-content: baseline;
-    max-width: 600px;
-    padding: 5% 20%;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: $about-max-width;
+    padding: $base-horizontal-padding;
+
+    @include tablet {
+      padding: $base-horizontal-padding-mobile;
+    }
   }
 
   .content {
-    font-size: 20px;
-    padding: 40px 60px;
-    max-width: 600px;
+    max-width: $about-max-width;
     text-align: justify;
 
-    p {
-      margin-top: 0;
-    }
-
-    @include mobile {
-      padding: 0 30px;
+    @include tablet {
+      margin: auto;
+      text-align: left;
     }
   }
 }

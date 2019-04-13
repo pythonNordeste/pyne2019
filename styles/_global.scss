@@ -65,20 +65,36 @@ a {
 }
 
 .section-base {
-  padding: 50px 0;
+  padding: $base-horizontal-padding 0;
   text-align: center;
 
   .section-title {
-    font-weight: 600;
+    font-weight: $font-weight-bolder;
     font-size: 40px;
+    padding: 0 $base-horizontal-padding;
+
+    @include tablet-wide {
+      padding: 0 $base-horizontal-padding-mobile;
+      font-size: 32px;
+    }
 
     @include mobile {
-      font-size: 32px;
+      font-size: 24px;
     }
   }
 
   .content {
     padding: 0 $base-horizontal-padding;
     line-height: 1.5;
+    font-size: 20px;
+
+    @include tablet {
+      padding: 0 $base-horizontal-padding-mobile;
+      font-size: 18px;
+    }
+  }
+
+  @include tablet-wide {
+    padding: $base-horizontal-padding-mobile 0;
   }
 }

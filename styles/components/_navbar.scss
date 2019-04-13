@@ -1,4 +1,21 @@
 // Navbar
+$navbar-bg: $white;
+$navbar-icon-bg: $base-red;
+$navbar-btn-color: $white;
+$navbar-font-size: 16px;
+$navbar-font-size-tablet-wide: 13px;
+$navbar-padding: 20px 30px;
+$navbar-padding-tablet-wide: 10px 20px;
+$navbar-padding-tablet: 10px 0;
+$navbar-logo-height: 32px;
+$navbar-logo-padding-tablet: 15px;
+$navbar-spacing: 15px;
+$navbar-spacing-tablet-wide: 0;
+$navbar-shadow: 0 1px 3px 0 transparentize($black, 0.8);
+$navbar-z-index: 99;
+$navbar-z-index-tablet: 15;
+$navbar-icon-z-index: 50;
+
 .pyn-nav {
   @include flex-center($justify: space-between);
   background: $navbar-bg;
@@ -39,8 +56,6 @@
     padding: $navbar-padding-tablet-wide;
 
     nav.menu {
-      box-shadow: $navbar-collapsed-shadow;
-
       a {
         font-size: $navbar-font-size-tablet-wide;
         margin-left: $navbar-spacing-tablet-wide;
@@ -59,6 +74,7 @@
 
     nav.menu {
       @include position(absolute, $top: 100%);
+      box-shadow: $navbar-shadow;
       flex-flow: column nowrap;
       background: $navbar-bg;
       width: 100%;
@@ -71,7 +87,11 @@
       a {
         text-align: center;
         padding: $navbar-spacing 0;
-        font-size: $navbar-font-size-tablet;
+
+        &.get-tickets,
+        &.submissions {
+          margin: 0 $navbar-spacing $navbar-spacing;
+        }
       }
     }
 

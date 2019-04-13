@@ -1,29 +1,40 @@
 // Buttons
+$btn-font-weight: $font-weight-bolder;
+$btn-border-radius: 4px;
+$btn-padding: 8px 18px;
+$btn-tickets-bg: $base-red;
+$btn-tickets-color: $white;
+$btn-submissions-bg: transparent;
+$btn-submissions-color: $base-red;
+$btn-border: solid 2px $base-red;
+
 .is-button {
   display: inline-block;
-  padding: 8px 18px;
-  border-radius: 4px;
-  font-weight: 600;
+  padding: $btn-padding;
+  border-radius: $btn-border-radius;
+  font-weight:  $btn-font-weight;
   line-height: 1.4;
   text-transform: uppercase;
-  border: solid 2px $base-red;
+  border: $btn-border;
+}
 
-  &.get-tickets {
-    background: $base-red;
-    color: $white;
+.is-button.get-tickets {
+  background: $btn-tickets-bg;
+  color:$btn-tickets-color;
 
-    &:hover {
-      background: darken($base-red, 5%);
-    }
+  &:hover {
+    background: darken($btn-tickets-bg, 5%);
+    border-color: darken($btn-tickets-bg, 5%);
   }
+}
 
-  &.submissions {
-    background: transparent;
-    color: $base-red;
+.is-button.submissions {
+  background: $btn-submissions-bg;
+  color: $btn-submissions-color;
 
-    &:hover {
-      color: $dark-red;
-      background: $light-red;
-    }
+  &:hover {
+    color: $white;
+    background: lighten($btn-submissions-color, 10%);
+    border-color: lighten($btn-submissions-color, 10%);
   }
 }

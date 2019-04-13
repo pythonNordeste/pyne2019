@@ -1,12 +1,12 @@
-@import './variables';
-@import './mixins';
-@import './global';
+@import './_variables';
+@import './_mixins';
+@import './_global';
 
-@import './components/buttons';
-@import './components/navbar';
-@import './components/footer';
-@import './components/hero';
-@import './components/about';
-@import './components/locations';
-@import './components/sponsors';
-@import './components/submissions';
+@import './components/_buttons';
+@import './components/_navbar';
+@import './components/_footer';
+@import './components/_hero';
+@import './components/_about';
+@import './components/_locations';
+@import './components/_sponsors';
+@import './components/_submissions';

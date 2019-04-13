@@ -1,93 +1,97 @@
 
 /* Hero */
+$hero-desktop-height: 640px;
+$hero-desktop-height-tablet: 440px;
+$hero-desktop-height-mobile: 340px;
+$hero-bg: $base-green;
+$hero-color: $base-green;
+$hero-font-size: 24px;
+$hero-font-size-tablet: 18px;
+$hero-font-weight: $font-weight-bolder;
+$hero-logo-bg: $white;
+
 .pyn-intro {
-  position: relative;
-  padding: 0px;
-  background-color: $base-green;
+  background-color: $hero-bg;
+  min-height: $hero-desktop-height;
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 40% 60%;
-  min-height: 90vh;
+  position: relative;
+
+  @include tablet-wide {
+    min-height: $hero-desktop-height-tablet;
+  }
 
   @include mobile {
+    grid-auto-flow: row;
     grid-template-columns: 1fr;
-    min-height: 70vh;
+    min-height: $hero-desktop-height-mobile;
+  }
+
+  h3 {
+    font-size: $hero-font-size;
+    font-weight: $hero-font-weight;
+    color: $hero-color;
+    text-align: center;
+    margin: 16px 0 0;
+
+    @include tablet {
+      font-size: $hero-font-size-tablet;
+    }
   }
 }
 
-.bg-pattern {
+.pyn-intro > .bg-pattern {
   position: relative;
 
   img.pattern {
     position: absolute;
+    max-width: 75px;
+
+    @include tablet-wide {
+      max-width: 50px;
+    }
 
     @include mobile {
-      height: 60%;
+      right: 0;
+      max-width: 30px;
       z-index: 11;
     }
   }
 }
 
-.bg-img {
-  background: url(../images/aurora.jpg) no-repeat center;
-  background-size: cover;
-}
-
-.pyn-intro h1 {
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 46px;
-}
-
-.pyn-intro h2 {
-  font-size: 32px;
-  font-weight: 400;
-  color: $base-red;
-  text-align: center;
-  margin: 0;
-
-  span {
-    color: $darker-red;
-  }
-}
-
-.pyn-intro h3 {
-  font-size: 24px;
-  font-weight: 600;
-  color: $base-green;
-  text-align: center;
-  margin: 2rem 0 0;
-
-  span {
-    color: $darker-red;
-  }
-}
-
-.pyn-intro .pyn--intro-logo {
-  background: $white;
-  padding: 4rem 1.5rem;
-  position: absolute;
-  width: 360px;
-  top: 50%;
-  left: 60%;
+.pyn-intro .bg-logo {
+  @include position(absolute, $top: 55%, $left: 70%);
   transform: translate(0, -45%);
+  background: $hero-logo-bg;
+  padding: 48px 0;
+  min-width: 200px;
+  max-width: 360px;
+  width: 100%;
   z-index: 10;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 
+  @include tablet-wide {
+    padding: 32px 0;
+    max-width: 300px;
+  }
+
   @include mobile {
+    max-width: 200px;
     transform: none;
-    position: relative;
-    padding: 2rem 1rem;
-    top: 15%;
+    top: 70px;
     left: 0;
   }
 
-  img {
-    width: 80%;
+  img.pyn-intro-logo {
+    max-width: 240px;
+    width: 100%;
     display: block;
     margin: auto;
+
+    @include tablet-wide {
+      max-width: 150px;
+    }
   }
 
   h2 > span {
@@ -96,81 +100,10 @@
   }
 }
 
-/* Hero section */
-.hero {
-  padding-top: 75px;
-
-  > .content {
-    padding: 50px ($base-horizontal-padding * 3) 90px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    color: $white;
-
-    h1 {
-      margin: 20px 0;
-      font-size: 80px;
-      letter-spacing: -1px;
-      color: $light-green;
-      line-height: 30px;
-
-      .python {
-        color: $dark-red;
-        font-weight: 400;
-      }
-
-      .nordeste {
-        color: $base-red;
-        font-weight: 600;
-      }
-    }
-
-    h2 {
-      font-size: 28px;
-      font-weight: 500;
-    }
-
-    h3 {
-      font-size: 26px;
-    }
-  }
-
-  .more-button {
-    cursor: pointer;
-
-    > i {
-      display: block;
-      position: relative;
-      margin: 0 auto 10px;
-      width: 25px;
-      height: 25px;
-      border: solid $white;
-      border-width: 0 2px 2px 0;
-      transform: rotateZ(45deg);
-      animation: arrow 1s ease-in-out;
-      animation-iteration-count: 2;
-    }
-
-    &:hover {
-      i {
-        top: 4px;
-      }
-    }
-  }
-
-  @include tablet-wide {
-    padding-top: 20px;
-  }
+.pyn-intro > .bg-img {
+  background: url(../images/aurora.jpg) no-repeat center;
+  background-size: cover;
 }
 
-@keyframes arrow {
-  0%,
-  100% {
-    top: 0;
-  }
 
-  50% {
-    top: 5px;
-  }
-}
+
