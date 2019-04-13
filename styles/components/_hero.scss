@@ -1,0 +1,176 @@
+
+/* Hero */
+.pyn-intro {
+  position: relative;
+  padding: 0px;
+  background-color: $base-green;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 40% 60%;
+  min-height: 90vh;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    min-height: 70vh;
+  }
+}
+
+.bg-pattern {
+  position: relative;
+
+  img.pattern {
+    position: absolute;
+
+    @include mobile {
+      height: 60%;
+      z-index: 11;
+    }
+  }
+}
+
+.bg-img {
+  background: url(../images/aurora.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.pyn-intro h1 {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 46px;
+}
+
+.pyn-intro h2 {
+  font-size: 32px;
+  font-weight: 400;
+  color: $base-red;
+  text-align: center;
+  margin: 0;
+
+  span {
+    color: $darker-red;
+  }
+}
+
+.pyn-intro h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: $base-green;
+  text-align: center;
+  margin: 2rem 0 0;
+
+  span {
+    color: $darker-red;
+  }
+}
+
+.pyn-intro .pyn--intro-logo {
+  background: $white;
+  padding: 4rem 1.5rem;
+  position: absolute;
+  width: 360px;
+  top: 50%;
+  left: 60%;
+  transform: translate(0, -45%);
+  z-index: 10;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+
+  @include mobile {
+    transform: none;
+    position: relative;
+    padding: 2rem 1rem;
+    top: 15%;
+    left: 0;
+  }
+
+  img {
+    width: 80%;
+    display: block;
+    margin: auto;
+  }
+
+  h2 > span {
+    display: inline-block;
+    margin-right: 8px;
+  }
+}
+
+/* Hero section */
+.hero {
+  padding-top: 75px;
+
+  > .content {
+    padding: 50px ($base-horizontal-padding * 3) 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    color: $white;
+
+    h1 {
+      margin: 20px 0;
+      font-size: 80px;
+      letter-spacing: -1px;
+      color: $light-green;
+      line-height: 30px;
+
+      .python {
+        color: $dark-red;
+        font-weight: 400;
+      }
+
+      .nordeste {
+        color: $base-red;
+        font-weight: 600;
+      }
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: 500;
+    }
+
+    h3 {
+      font-size: 26px;
+    }
+  }
+
+  .more-button {
+    cursor: pointer;
+
+    > i {
+      display: block;
+      position: relative;
+      margin: 0 auto 10px;
+      width: 25px;
+      height: 25px;
+      border: solid $white;
+      border-width: 0 2px 2px 0;
+      transform: rotateZ(45deg);
+      animation: arrow 1s ease-in-out;
+      animation-iteration-count: 2;
+    }
+
+    &:hover {
+      i {
+        top: 4px;
+      }
+    }
+  }
+
+  @include tablet-wide {
+    padding-top: 20px;
+  }
+}
+
+@keyframes arrow {
+  0%,
+  100% {
+    top: 0;
+  }
+
+  50% {
+    top: 5px;
+  }
+}

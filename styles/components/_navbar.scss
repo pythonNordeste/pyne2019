@@ -1,0 +1,84 @@
+// Navbar
+.pyn-nav {
+  @include flex-center($justify: space-between);
+  background: $navbar-bg;
+  padding: $navbar-padding;
+  box-shadow: $navbar-shadow;
+  z-index: $navbar-z-index;
+  position: fixed;
+  width: 100%;
+
+  .logo > img {
+    height: $navbar-logo-height;
+  }
+
+  nav.menu {
+    font-size: $navbar-font-size;
+
+    a {
+      margin-left: $navbar-spacing;
+      text-transform: uppercase;
+    }
+  }
+
+  .mobile-icon {
+    @include size($width: 32px, $height: 21px);
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    cursor: pointer;
+
+    > i {
+      @include size($width: 100%, $height: 3px);
+      background: $navbar-icon-bg;
+      display: block;
+    }
+  }
+
+  @include tablet-wide {
+    padding: $navbar-padding-tablet-wide;
+
+    nav.menu {
+      box-shadow: $navbar-collapsed-shadow;
+
+      a {
+        font-size: $navbar-font-size-tablet-wide;
+        margin-left: $navbar-spacing-tablet-wide;
+      }
+    }
+  }
+
+  @include tablet {
+    position: fixed;
+    padding: $navbar-padding-tablet; // definido nos elementos
+    z-index: $navbar-z-index-tablet;
+
+    .logo {
+      padding-left: $navbar-logo-padding-tablet;
+    }
+
+    nav.menu {
+      @include position(absolute, $top: 100%);
+      flex-flow: column nowrap;
+      background: $navbar-bg;
+      width: 100%;
+      display: none;
+
+      &.is-open {
+        display: flex;
+      }
+
+      a {
+        text-align: center;
+        padding: $navbar-spacing 0;
+        font-size: $navbar-font-size-tablet;
+      }
+    }
+
+    .mobile-icon {
+      display: flex;
+      margin-right: $navbar-spacing;
+      z-index: $navbar-icon-z-index;
+    }
+  }
+}

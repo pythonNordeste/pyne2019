@@ -1,0 +1,36 @@
+// About
+.section-base.about {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 40% 60%;
+  background: url(../images/fix-right.svg) no-repeat 90vw center;
+  color: $darker-green;
+
+  @include mobile {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    display: flex;
+    align-items: start;
+    justify-content: baseline;
+    max-width: 600px;
+    padding: 5% 20%;
+  }
+
+  .content {
+    font-size: 20px;
+    padding: 40px 60px;
+    max-width: 600px;
+    text-align: justify;
+
+    p {
+      margin-top: 0;
+    }
+
+    @include mobile {
+      padding: 0 30px;
+    }
+  }
+}

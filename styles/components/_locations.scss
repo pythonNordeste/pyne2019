@@ -1,0 +1,40 @@
+// Locations
+.locations {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../images/cais.jpg) 50% 0 no-repeat fixed;
+  background-position: center -100px;
+  background-size: cover;
+  color: $white;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 45% 55%;
+
+  @include tablet-wide {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+  }
+
+  a {
+    color: $white;
+    font-weight: bold;
+  }
+
+  .section-title {
+    background: url(../images/light.svg) no-repeat left top;
+  }
+
+  .content {
+    text-align: justify;
+
+    span {
+      font-size: 12px;
+    }
+  }
+}
+
+.map-container {
+  position: relative;
+  z-index: 5;
+  border-radius: 15px;
+  box-shadow: 0 10px 60px 0 rgba(0, 0, 0, 0.74);
+}

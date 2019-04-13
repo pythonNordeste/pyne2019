@@ -1,0 +1,29 @@
+// Buttons
+.is-button {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-transform: uppercase;
+  border: solid 2px $base-red;
+
+  &.get-tickets {
+    background: $base-red;
+    color: $white;
+
+    &:hover {
+      background: darken($base-red, 5%);
+    }
+  }
+
+  &.submissions {
+    background: transparent;
+    color: $base-red;
+
+    &:hover {
+      color: $dark-red;
+      background: $light-red;
+    }
+  }
+}
