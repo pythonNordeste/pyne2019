@@ -20,9 +20,7 @@ $about-color: $darker-green;
   }
 
   .section-title {
-    display: flex;
-    align-items: start;
-    justify-content: center;
+    text-align: center;
     margin: 0 auto;
     max-width: $about-max-width;
     padding: $base-horizontal-padding;
@@ -34,11 +32,10 @@ $about-color: $darker-green;
 
   .content {
     max-width: $about-max-width;
-    text-align: justify;
+    text-align: left;
 
     @include tablet {
       margin: auto;
-      text-align: left;
     }
   }
 }
