@@ -12,7 +12,7 @@ const activateMenuToggle = () => {
 };
 
 const activateOneScroll = () => {
-  $(".navbar a[href*='#']").mPageScroll2id({
+  $(".pyn-nav a[href*='#']").mPageScroll2id({
     offset: 80
   });
 };
