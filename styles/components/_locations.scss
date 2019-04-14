@@ -15,6 +15,7 @@ $locations-max-width: 750px;
   @include tablet-wide {
     grid-auto-flow: row;
     grid-template-columns: 1fr;
+    padding-bottom: 0;
   }
 
   a {
@@ -24,7 +25,11 @@ $locations-max-width: 750px;
 
   .section-title {
     background: url(../images/light.svg) no-repeat left top;
-    padding-bottom: $base-horizontal-padding-mobile;
+
+    @include tablet {
+      text-align: left;
+      width: 100%;
+    }
   }
 
   .content {

@@ -1,29 +1,31 @@
 // Submissions
+$submissions-max-width: 900px;
+$submissions-title-bg: $base-red;
+$submissions-title-color: $white;
+
 .submissions-section {
   .section-title {
-    background: $base-red;
-    padding: 80px $base-horizontal-padding 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: $white;
+    background: $submissions-title-bg;
+    padding: $base-horizontal-padding;
+    color: $submissions-title-color;
+
+    @include tablet {
+      padding: $base-horizontal-padding-tablet;
+    }
   }
 
   .content {
+    padding-top: $base-horizontal-padding;
     text-align: left;
-  }
 
-  @include tablet-wide {
-    padding: 20px 0 0;
-
-    .content {
-      padding: 0 20px 20px;
+    @include tablet {
+      padding-top: $base-horizontal-padding-tablet;
     }
   }
 
   @include desktop-up {
     .content {
-      max-width: 800px;
+      max-width: $submissions-max-width;
       margin: 0 auto;
     }
   }

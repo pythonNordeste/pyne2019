@@ -66,15 +66,14 @@ a {
 
 .section-base {
   padding: $base-horizontal-padding 0;
-  text-align: center;
 
   .section-title {
     font-weight: $font-weight-bolder;
     font-size: 40px;
-    padding: 0 $base-horizontal-padding;
+    padding: $base-padding-title;
+    text-align: center;
 
     @include tablet-wide {
-      padding: 0 $base-horizontal-padding-mobile;
       font-size: 32px;
     }
 
@@ -84,17 +83,17 @@ a {
   }
 
   .content {
-    padding: 0 $base-horizontal-padding;
+    padding: 0 $base-vertical-padding;
     line-height: 1.5;
     font-size: 20px;
 
     @include tablet {
-      padding: 0 $base-horizontal-padding-mobile;
+      padding: 0 $base-horizontal-padding-tablet;
       font-size: 18px;
     }
-  }
 
-  @include tablet-wide {
-    padding: $base-horizontal-padding-mobile 0;
+    @include mobile {
+      padding: 0 $base-horizontal-padding-mobile;
+    }
   }
 }

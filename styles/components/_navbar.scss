@@ -24,6 +24,7 @@ $navbar-icon-z-index: 50;
   z-index: $navbar-z-index;
   position: fixed;
   width: 100%;
+  height: 80px;
 
   .logo > img {
     height: $navbar-logo-height;

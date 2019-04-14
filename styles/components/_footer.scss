@@ -1,18 +1,28 @@
 
 // Footer
+$footer-bg: $darker-green;
+$footer-color: $beige;
+$footer-font-size: 14px;
+$footer-text-max-width: 300px;
+
+$footer-cta-bg: $lighter-red;
+$footer-cta-color: $darker-red;
+$footer-cta-max-width: 700px;
+$footer-cta-pattern-height: 65px;
+
 .footer {
   padding: 25px 25px 10px 25px;
-  background-color: $darker-green;
+  background-color: $footer-bg;
 }
 
 .footer p {
-  margin: 0;
-  color: $beige;
+  font-size: $footer-font-size;
+  color: $footer-color;
   text-align: center;
-  font-size: 14px;
+  margin: 0;
 
   @include mobile {
-    max-width: 300px;
+    max-width: $footer-text-max-width;
     margin: auto;
   }
 }
@@ -39,41 +49,36 @@
   }
 }
 
-// Tickets CTA
-.tickets-cta {
-  background-color: $lighter-red;
-  color: $darker-red;
+// Footer CTA
+.footer-cta {
+  background-color: $footer-cta-bg;
+  color: $footer-cta-color;
   position: relative;
-
-  .section-title {
-    margin: $base-horizontal-padding-mobile auto;
-  }
-
-  .content {
-    margin: auto;
-    max-width: 700px;
-
-    a {
-      margin-top: 15px;
-    }
-  }
-
-  .detail {
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translateY(-50%);
-    height: 65px;
-  }
 
   @include tablet {
     max-width: 100%;
   }
 
-  @include mobile {
-    .content .ctas {
-      display: flex;
-      flex-flow: column nowrap;
+  .content {
+    max-width: $footer-cta-max-width;
+    text-align: center;
+    margin: auto;
+
+    a {
+      margin-top: 15px;
     }
+
+    @include mobile {
+      .ctas {
+        display: flex;
+        flex-flow: column nowrap;
+      }
+    }
+  }
+
+  .detail {
+    @include position(absolute, $top: 0, $right: 0);
+    transform: translateY(-50%);
+    height: $footer-cta-pattern-height;
   }
 }
