@@ -4,6 +4,7 @@ $footer-bg: $darker-green;
 $footer-color: $beige;
 $footer-font-size: 14px;
 $footer-text-max-width: 300px;
+$footer-link-font-size: 16px;
 
 $footer-cta-bg: $lighter-red;
 $footer-cta-color: $darker-red;
@@ -25,6 +26,11 @@ $footer-cta-pattern-height: 65px;
     max-width: $footer-text-max-width;
     margin: auto;
   }
+}
+
+.footer p.cdc {
+  margin-top: 20px;
+  font-size: $footer-link-font-size;
 }
 
 .footer-brand {
@@ -82,3 +88,4 @@ $footer-cta-pattern-height: 65px;
     height: $footer-cta-pattern-height;
   }
 }
+

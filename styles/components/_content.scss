@@ -1,13 +1,16 @@
-// Submissions
-$submissions-max-width: 900px;
-$submissions-title-bg: $base-red;
-$submissions-title-color: $white;
+// Content
+$content-max-width: 900px;
+$content-title-bg: $base-red;
+$content-title-color: $white;
+$content-color: $darker-green;
 
-.submissions-section {
+.content-section {
+  color: $content-color;
+
   .section-title {
-    background: $submissions-title-bg;
+    background: $content-title-bg;
     padding: $base-horizontal-padding;
-    color: $submissions-title-color;
+    color: $content-title-color;
 
     @include tablet {
       padding: $base-horizontal-padding-tablet;
@@ -25,7 +28,7 @@ $submissions-title-color: $white;
 
   @include desktop-up {
     .content {
-      max-width: $submissions-max-width;
+      max-width: $content-max-width;
       margin: 0 auto;
     }
   }

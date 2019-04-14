@@ -35,10 +35,7 @@ $locations-max-width: 750px;
   .content {
     text-align: left;
     max-width: $locations-max-width;
-
-    @include tablet-wide {
-      margin: auto;
-    }
+    margin: auto;
 
     span {
       font-size: 12px;
