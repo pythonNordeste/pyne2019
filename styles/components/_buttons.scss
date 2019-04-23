@@ -7,6 +7,8 @@ $btn-tickets-color: $white;
 $btn-submissions-bg: transparent;
 $btn-submissions-color: $base-red;
 $btn-border: solid 2px $base-red;
+$btn-group-mb: 20px;
+$btn-group-btn-m: 0 10%;
 
 .is-button {
   display: inline-block;
@@ -36,5 +38,16 @@ $btn-border: solid 2px $base-red;
     color: $white;
     background: lighten($btn-submissions-color, 10%);
     border-color: lighten($btn-submissions-color, 10%);
+  }
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: $btn-group-mb;
+
+  .is-button {
+    margin: $btn-group-btn-m;
   }
 }
