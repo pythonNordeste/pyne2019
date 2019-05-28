@@ -62,7 +62,13 @@ $keynote-text-size: 16px;
         color: $darker-red;
 
         a {
-          color: $darker-red;
+          color: inherit;
+          font-weight: inherit;
+
+          &:hover {
+            color: $base-red;
+          }
+
         }
       }
 
