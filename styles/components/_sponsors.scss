@@ -17,5 +17,52 @@ $sponsors-max-width: 700px;
     max-width: $sponsors-max-width;
     margin: auto;
     text-align: center;
+    align-items: center;
+  }
+
+  .sponsor-block {
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-flow: column;
+    justify-content: center;
+
+    .block {
+      padding: 10px;
+
+    }
+  }
+
+  .diamond {
+    img {
+      height: 150px;
+      width: 250px;
+    }
+  }
+
+  .gold {
+    img {
+      width: 200px;
+    }
+  }
+
+  .silver {
+    img {
+      height: 100px;
+      width: 150px;
+    }
+  }
+
+  .copper {
+    img {
+      height: 100px;
+      width: 100px;
+    }
+  }
+
+  .partner {
+    img {
+      height: 100px;
+      width: 150px;
+    }
   }
 }
