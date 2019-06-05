@@ -15,11 +15,20 @@
   background: $selection-bg;
 }
 
+img {
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
 body {
   margin: 0;
   font-family: $font-family-base;
   font-weight: $font-weight-base;
-  background-color: $body-bg;
   background-color: $body-bg;
 }
 

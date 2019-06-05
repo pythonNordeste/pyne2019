@@ -1,8 +1,7 @@
-import mPageScroll2id from "page-scroll-to-id";
 
 $(document).ready(() => {
+  $("#pyn-nav").click(handleCloseMenu)
   activateMenuToggle();
-  activateOneScroll();
 });
 
 const activateMenuToggle = () => {
@@ -11,12 +10,7 @@ const activateMenuToggle = () => {
   toggle.click(() => menu.toggleClass("is-open"));
 };
 
-const activateOneScroll = () => {
-  $(".pyn-nav a[href*='#']").mPageScroll2id({
-    offset: 80,
-    onStart: () => {
-        const menu = $("#pyn-nav");
-        menu.removeClass("is-open");
-    }
-  });
-};
+const handleCloseMenu = (event) => {
+  event.currentTarget.classList.remove("is-open")
+}
+
