@@ -1,6 +1,6 @@
 // Sponsors
 $sponsors-color: $darker-green;
-$sponsors-max-width: 700px;
+$sponsors-max-width: 800px;
 
 .section-base.sponsors {
   background: url(../images/areia.svg) repeat-x center center;
@@ -31,7 +31,7 @@ $sponsors-max-width: 700px;
     padding-top: 20px;
 
     .block {
-      margin: 0 30px;
+      margin: 0 25px;
     }
 
     img {
@@ -42,34 +42,32 @@ $sponsors-max-width: 700px;
   }
 
   .diamond {
-    flex: 1.3344;
+    flex: 0.5;
   }
 
   .gold {
-    flex: 1.3345;
-    img {
-      max-height: 100px;
-    }
+    flex: 0.33;
   }
 
   .silver {
     flex: 0.58;
+    margin: 0 15px !important;
     img {
       max-width: 160px;
+      max-height: 75px;
     }
   }
 
   .copper {
-    flex: 0.75;
-    img {
-      max-width: 170px;
-    }
+    flex: 0.33;
+    margin: 0 30px !important;
+
   }
 
   .partner {
-    flex: 0.75;
+    flex: 0.33;
     img {
-      max-height: 120px;
+      max-height: 100px;
     }
   }
 
