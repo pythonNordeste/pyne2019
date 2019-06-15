@@ -2,7 +2,7 @@
 $sponsors-color: $darker-green;
 $sponsors-max-width: 800px;
 
-.section-base.sponsors {
+.section-base.patrocinio {
   background: url(../images/areia.svg) repeat-x center center;
   color: $sponsors-color;
 
@@ -21,11 +21,11 @@ $sponsors-max-width: 800px;
     color: #DF5335;
   }
 
-  .sponsor-content {
+  .patroc-content {
     padding: 20px 0;
   }
 
-  .sponsor-block {
+  .patroc-block {
     display: flex;
     align-items: center;
     padding-top: 20px;
