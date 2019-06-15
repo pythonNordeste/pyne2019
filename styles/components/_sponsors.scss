@@ -33,6 +33,11 @@ $sponsors-max-width: 800px;
     .block {
       margin: 0 25px;
     }
+    @media (max-width: 600px) {
+      .block {
+        margin: 0 15px;
+      }
+    }
 
     img {
       width: 100%;
@@ -41,12 +46,30 @@ $sponsors-max-width: 800px;
     }
   }
 
+  @media (max-width: 600px) {
+      .patroc-block {
+        display: flex;
+        align-items: center;
+        padding-top: 5px;
+      }
+    }
+
   .diamond {
     flex: 0.5;
+    @media (max-width: 600px) {
+      img {
+          width: 75%;
+      }
+    }
   }
 
   .gold {
     flex: 0.33;
+    @media (max-width: 600px) {
+      img {
+          width: 100%;
+      }
+    }
   }
 
   .silver {
@@ -56,18 +79,32 @@ $sponsors-max-width: 800px;
       max-width: 160px;
       max-height: 75px;
     }
+    @media (max-width: 600px) {
+      margin: 0 10px !important;
+
+      img {
+          width: 30%;
+      }
+    }
   }
 
   .copper {
     flex: 0.33;
     margin: 0 30px !important;
-
+    @media (max-width: 600px) {
+      margin: 0 20px !important;
+    }
   }
 
   .partner {
     flex: 0.33;
     img {
       max-height: 100px;
+    }
+    @media (max-width: 600px) {
+      img {
+          width: 70%;
+      }
     }
   }
 
