@@ -6,11 +6,6 @@ $footer-font-size: 14px;
 $footer-text-max-width: 300px;
 $footer-link-font-size: 16px;
 
-$footer-cta-bg: $lighter-red;
-$footer-cta-color: $darker-red;
-$footer-cta-max-width: 700px;
-$footer-cta-pattern-height: 65px;
-
 .footer {
   padding: 25px 25px 10px 25px;
   background-color: $footer-bg;
@@ -52,40 +47,6 @@ $footer-cta-pattern-height: 65px;
 
   @include tablet {
     width: 80%;
-  }
-}
-
-// Footer CTA
-.footer-cta {
-  background-color: $footer-cta-bg;
-  color: $footer-cta-color;
-  position: relative;
-
-  @include tablet {
-    max-width: 100%;
-  }
-
-  .content {
-    max-width: $footer-cta-max-width;
-    text-align: center;
-    margin: auto;
-
-    a {
-      margin-top: 15px;
-    }
-
-    @include mobile {
-      .ctas {
-        display: flex;
-        flex-flow: column nowrap;
-      }
-    }
-  }
-
-  .detail {
-    @include position(absolute, $top: 0, $right: 0);
-    transform: translateY(-50%);
-    height: $footer-cta-pattern-height;
   }
 }
 

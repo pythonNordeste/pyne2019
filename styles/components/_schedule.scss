@@ -1,0 +1,121 @@
+$schedule-bg: $lighter-red;
+$schedule-pattern-height: 65px;
+$schedule-title-width: 45%;
+
+.schedule {
+  background-color: $schedule-bg;
+  position: relative;
+
+  @include tablet {
+    max-width: 100%;
+  }
+
+  .section-title {
+    background: url(../images/light.svg) no-repeat left top;
+    width: $schedule-title-width;
+
+    @include tablet {
+      text-align: left;
+    }
+  }
+
+  .content {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    @include tablet {
+        flex-direction: column;
+    }
+
+    @include mobile {
+        flex-direction: column;
+    }
+
+    .day-schedule {
+        margin: 0 30px;
+        margin-bottom: 44px;
+
+        &:nth-of-type(1) {
+            color: $dark-green;
+            h3 {
+                background-image: url('../images/title-green.svg');
+            }
+        }
+
+        &:nth-of-type(2) {
+            color: $orange;
+            h3 {
+                background-image: url('../images/title-orange.svg');
+            }
+        }
+
+        &:nth-of-type(3) {
+            color: $darker-red;
+            h3 {
+                background-image: url('../images/title-red.svg');
+            }
+        }
+
+        h3 {
+            font-weight: 900;
+            font-size: 28px;
+            line-height: 80px;
+            text-align: center;
+            height: 80px;
+            width: 256px;
+            color: $white;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            @include tablet {
+                background-size: 488px 80px;
+                width: 488px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            @include mobile {
+                width: 256px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        table {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            width: 256px;
+            margin-left: auto;
+            margin-right: auto;
+
+            @include tablet {
+                width: 488px;
+            }
+
+            @include mobile {
+                width: 256px;
+            }
+
+            tr {
+                td:first-child {
+                    width: 25%
+                }
+
+                td:last-child {
+                    width: 75%;
+                }
+            }
+        }
+    }
+
+  }
+
+  .detail {
+    @include position(absolute, $top: 0, $right: 0);
+    transform: translateY(-50%);
+    height: $schedule-pattern-height;
+  }
+}
