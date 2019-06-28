@@ -34,40 +34,22 @@ $schedule-title-width: 45%;
     }
 
     .day-schedule {
-        margin: 0 30px;
+        margin: 0 22px;
         margin-bottom: 44px;
-
-        &:nth-of-type(1) {
-            color: $dark-green;
-            h3 {
-                background-image: url('../images/title-green.svg');
-            }
-        }
-
-        &:nth-of-type(2) {
-            color: $orange;
-            h3 {
-                background-image: url('../images/title-orange.svg');
-            }
-        }
-
-        &:nth-of-type(3) {
-            color: $darker-red;
-            h3 {
-                background-image: url('../images/title-red.svg');
-            }
-        }
+        color: $darker-green;
 
         h3 {
             font-weight: 900;
             font-size: 28px;
-            line-height: 80px;
+            line-height: 70px;
             text-align: center;
-            height: 80px;
-            width: 256px;
-            color: $white;
-            background-repeat: no-repeat;
-            background-position: center;
+            height: 70px;
+            width: 258px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 28px;
+            color: $dark-green;
+            background: url('../images/title.svg') no-repeat center;
 
             @include tablet {
                 background-size: 488px 80px;
@@ -77,17 +59,16 @@ $schedule-title-width: 45%;
             }
 
             @include mobile {
-                width: 256px;
+                width: 300px;
                 margin-left: auto;
                 margin-right: auto;
             }
         }
 
         table {
-            font-weight: 500;
             font-size: 16px;
-            line-height: 24px;
-            width: 256px;
+            line-height: 20px;
+            width: 368px;
             margin-left: auto;
             margin-right: auto;
 
@@ -96,19 +77,44 @@ $schedule-title-width: 45%;
             }
 
             @include mobile {
-                width: 256px;
+                width: 300px;
             }
 
             tr {
-                td:first-child {
-                    width: 25%
+                td {
+                    vertical-align: top;
+                    padding-bottom: 12px;
+
+                    &:nth-child(1) {
+                        font-weight: 600;
+                        width: 54px;
+                        color: $dark-green;
+                    }
+
+
+                    &:nth-child(3) {
+                        width: 208px;
+                    }
+
+                    span {
+                        text-transform: uppercase;
+                        background-color: $light-green;
+                        border-radius: 4px;
+                        color: $white;
+                        padding: 0 8px;
+
+                        &.cesar {
+                            background-color: $light-red;
+                        }
+
+                    }
+
                 }
 
-                td:last-child {
-                    width: 75%;
-                }
             }
+
         }
+
     }
 
   }
