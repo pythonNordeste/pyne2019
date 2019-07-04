@@ -1,4 +1,4 @@
-$schedule-bg: $lighter-red;
+$schedule-bg: #F2EDD9;
 $schedule-pattern-height: 65px;
 $schedule-title-width: 45%;
 
@@ -36,7 +36,7 @@ $schedule-title-width: 45%;
     .day-schedule {
         margin: 0 22px;
         margin-bottom: 44px;
-        color: $darker-green;
+        color: $dark-green;
 
         @include mobile {
             margin-left: 0;
@@ -49,11 +49,10 @@ $schedule-title-width: 45%;
             line-height: 70px;
             text-align: center;
             height: 70px;
-            width: 258px;
             margin-left: auto;
             margin-right: auto;
             margin-bottom: 28px;
-            color: $dark-green;
+            color: $orange;
             background: url('../images/title.svg') no-repeat center;
 
             @include tablet {
@@ -69,7 +68,6 @@ $schedule-title-width: 45%;
         table {
             font-size: 16px;
             line-height: 20px;
-            width: 368px;
             margin-left: auto;
             margin-right: auto;
 
@@ -78,7 +76,7 @@ $schedule-title-width: 45%;
             }
 
             @include mobile {
-                width: 338px;
+                width: 310px;
             }
 
             tr {
@@ -87,15 +85,22 @@ $schedule-title-width: 45%;
                     padding-bottom: 12px;
 
                     &:nth-child(1) {
+                        width: 80px;
+                        padding-left: 8px;
+                        padding-right: 8px;
+                    }
+
+                    &:nth-child(2) {
                         font-weight: 600;
-                        width: 54px;
-                        color: $dark-green;
+                        width: 52px;
+                        padding-left: 8px;
+                        padding-right: 8px;
+                        color: $darker-green;
 
                         @include mobile {
                             width: 50px;
                         }
                     }
-
 
                     &:nth-child(3) {
                         width: 208px;
@@ -109,17 +114,36 @@ $schedule-title-width: 45%;
                         }
                     }
 
+                    &.dark-red {
+                        color: $dark-red;
+                    }
+
                     span {
                         text-transform: uppercase;
-                        background-color: $light-green;
+                        background-color: $dark-green;
                         border-radius: 4px;
                         color: $white;
                         padding: 0 8px;
+                        display: block;
+                        text-align: center;
 
                         &.cesar {
-                            background-color: $light-red;
+                            background-color: $base-red;
                         }
 
+                    }
+
+                }
+
+                &.ornamento-agenda {
+                    background: url(../images/ornamento-agenda.svg) no-repeat left top;
+
+                    td:nth-child(2) {
+                        color: $darker-red;
+                    }
+
+                    td:nth-child(3) {
+                        color: $orange;
                     }
 
                 }
